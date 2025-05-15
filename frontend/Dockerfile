@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 ENV NODE_OPTIONS="--max-old-space-size=1024"
 # Собираем приложение
-RUN npm run build
+RUN npm run build -- --no-sourcemap
 
 # Финальный образ с Nginx для раздачи статики
 FROM nginx:stable-alpine
