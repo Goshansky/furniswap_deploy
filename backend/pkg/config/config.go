@@ -58,7 +58,7 @@ func Load() {
 	}
 
 	// CORS settings
-	allowedOrigins := []string{"http://localhost:80"}
+	allowedOrigins := []string{"http://178.130.49.128"}
 	if origins := os.Getenv("ALLOWED_ORIGINS"); origins != "" {
 		allowedOrigins = []string{origins}
 	}
