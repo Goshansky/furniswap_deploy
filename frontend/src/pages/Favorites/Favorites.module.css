@@ -1,0 +1,173 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+  border-bottom: 3px solid #0078d7;
+  padding-bottom: 15px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.productWrapper {
+  position: relative;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.productWrapper:hover {
+  transform: translateY(-5px);
+}
+
+.removeButton {
+  margin-top: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.removeButton:hover {
+  background-color: #c0392b;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff5f5;
+  border-radius: 8px;
+  min-height: 200px;
+  border: 1px solid #ffcccc;
+}
+
+.error p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: #e74c3c;
+}
+
+.retryButton {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #006bc7;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+.emptyState h2 {
+  margin: 0 0 15px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #333;
+}
+
+.emptyState p {
+  margin: 0 0 30px;
+  font-size: 16px;
+  color: #666;
+  max-width: 500px;
+}
+
+.browseButton {
+  background-color: #0078d7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+.browseButton:hover {
+  background-color: #006bc7;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+} 

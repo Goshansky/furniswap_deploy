@@ -1,0 +1,30 @@
+.footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: white;
+}

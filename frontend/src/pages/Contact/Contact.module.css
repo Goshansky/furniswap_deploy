@@ -1,0 +1,150 @@
+.contactContainer {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contactContent {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.title {
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.intro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contactForm {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.input, .textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input:focus, .textarea:focus {
+    border-color: #3f2b96;
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.submitButton {
+    display: block;
+    width: 100%;
+    background-color: #3f2b96;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #5a3ec8;
+}
+
+.errorText {
+    color: #ef4444;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.infoItem {
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.infoItem h3 {
+    font-size: 18px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.infoItem p {
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.linkContainer {
+    text-align: center;
+}
+
+.backLink {
+    display: inline-block;
+    background-color: #3f2b96;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.backLink:hover {
+    background-color: #5a3ec8;
+}
+
+.successMessage {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.successMessage h2 {
+    font-size: 24px;
+    color: #059669;
+    margin-bottom: 10px;
+}
+
+.successMessage p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 25px;
+} 

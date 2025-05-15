@@ -1,0 +1,230 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarBrand {
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #0078d7;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navbarStart, .navbarEnd {
+  display: flex;
+  align-items: center;
+}
+
+.navbarStart {
+  margin-left: 2rem;
+}
+
+.navbarItem {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbarItem:hover, .navbarItem.active {
+  color: #0078d7;
+}
+
+.navbarItem.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: #0078d7;
+}
+
+.createButton {
+  margin-right: 1rem;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #0078d7 !important;
+  border: none !important;
+}
+
+.navbarItemWithDropdown {
+  position: relative;
+}
+
+.navbarItemWithDropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.profileTrigger {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.profileTrigger:hover {
+  color: #0078d7;
+}
+
+.avatarSmall {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0078d7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  z-index: 10;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+  color: #0078d7;
+}
+
+.navbarMobileToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.navbarMobileToggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbarMobileToggle {
+    display: flex;
+  }
+  
+  .navbarMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbarMenu.active {
+    display: flex;
+  }
+  
+  .navbarStart, .navbarEnd {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .navbarStart {
+    margin-bottom: 1rem;
+  }
+  
+  .navbarItem {
+    width: 100%;
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+  
+  .navbarItem.active::after {
+    display: none;
+  }
+  
+  .createButton {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .navbarItemWithDropdown {
+    width: 100%;
+  }
+  
+  .profileTrigger {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    display: block;
+    width: 100%;
+  }
+  
+  .dropdownItem {
+    text-align: center;
+  }
+} 

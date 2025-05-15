@@ -1,0 +1,8 @@
+# Ignore artifacts:
+/node_modules
+/public
+jsconfig.json
+.gitignore
+package.json
+package-lock.json
+README.md

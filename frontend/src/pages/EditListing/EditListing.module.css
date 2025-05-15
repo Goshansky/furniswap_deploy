@@ -1,0 +1,331 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formSection {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+.inputError {
+  border-color: #e74c3c;
+}
+
+.errorText {
+  color: #e74c3c;
+  font-size: 12px;
+  margin: 5px 0 0;
+}
+
+.photoInfo {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.photoUpload {
+  margin-bottom: 15px;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.photoPreview {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Square aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.photoPreview img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.removePhoto {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.removePhoto:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mainPhoto {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  padding: 3px 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 10px;
+  border-radius: 4px;
+}
+
+.addPhotoButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  padding-bottom: 100%; /* Square aspect ratio */
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.addPhotoButton span:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #999;
+  font-weight: 300;
+}
+
+.addPhotoButton span:last-child {
+  position: absolute;
+  top: calc(50% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+}
+
+.addPhotoButton:hover {
+  border-color: #0078d7;
+  background-color: rgba(0, 120, 215, 0.05);
+}
+
+.addPhotoButton:hover span {
+  color: #0078d7;
+}
+
+.uploading {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.spinnerIcon {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cancelButton {
+  padding: 12px 24px;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  color: #666;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: #f5f5f5;
+}
+
+.submitButton {
+  padding: 12px 30px;
+  border: none;
+  background-color: #0078d7;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #006bc7;
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.globalError {
+  background-color: #fde2e2;
+  border: 1px solid #f7caca;
+  color: #e74c3c;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.globalError p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.photoUploadInfo {
+  margin-bottom: 20px;
+}
+
+.photoUploadWarning {
+  font-size: 14px;
+  color: #e67e22;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fef8e3;
+  border-radius: 8px;
+  border-left: 3px solid #e67e22;
+}
+
+.imageUrlInput {
+  display: flex;
+  gap: 10px;
+}
+
+.addUrlButton {
+  padding: 0 20px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.addUrlButton:hover {
+  background-color: #006bc7;
+}
+
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #0078d7;
+} 

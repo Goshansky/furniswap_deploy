@@ -1,0 +1,369 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumbs {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumbItem {
+    cursor: pointer;
+    color: #0078d7;
+    transition: color 0.2s;
+}
+
+.breadcrumbItem:hover {
+    color: #006bc7;
+    text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+    margin: 0 6px;
+    color: #999;
+}
+
+.breadcrumbActive {
+    color: #666;
+    font-weight: 500;
+}
+
+.productContainer {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.productImagesSection {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainImageContainer {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+
+.mainProductImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f9f9f9;
+}
+
+.thumbnailsContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.thumbnail:hover {
+    border-color: #cce4f7;
+}
+
+.thumbnailActive {
+    border-color: #0078d7;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productInfo {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productTitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.productPrice {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0078d7;
+    margin: 5px 0;
+}
+
+.productLocation {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.productDetails {
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+    padding: 15px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.productCondition, .productCategory, .productAuthor {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+}
+
+.productDescription {
+    margin-top: 20px;
+}
+
+.productDescription h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.productDescription p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.productMeta {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #777;
+}
+
+.productDate, .productId {
+    margin: 5px 0;
+}
+
+.productActions {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 15px;
+}
+
+.favoriteButton, .contactButton, .buyButton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buyButton {
+    background-color: #28a745;
+    color: white;
+    flex-basis: 40%;
+}
+
+.buyButton:hover {
+    background-color: #218838;
+}
+
+.buyButton:disabled {
+    background-color: #8fc99e;
+    cursor: not-allowed;
+}
+
+.buttonLoading {
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonLoading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: loadingShimmer 1.5s infinite;
+}
+
+@keyframes loadingShimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+.favoriteButton {
+    background-color: white;
+    color: #0078d7;
+    border: 1px solid #0078d7;
+    flex-basis: 30%;
+}
+
+.favoriteButton:hover {
+    background-color: #f0f7ff;
+}
+
+.favoriteActive {
+    background-color: #e6f3ff;
+    border-color: #006bc7;
+    color: #006bc7;
+    font-weight: 600;
+}
+
+.contactButton {
+    background-color: #0078d7;
+    color: white;
+    flex-basis: 30%;
+}
+
+.contactButton:hover {
+    background-color: #006bc7;
+}
+
+.successMessage {
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.notFound {
+    text-align: center;
+    color: #e74c3c;
+    margin: 40px 0;
+}
+
+.loadingContainer, .errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    flex: 1;
+}
+
+.loadingText {
+    font-size: 18px;
+    color: #0078d7;
+}
+
+.backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.backButton:hover {
+    background-color: #006bc7;
+}
+
+@media (max-width: 992px) {
+    .productContainer {
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .mainImageContainer {
+        height: 350px;
+    }
+    
+    .actionButtons {
+        flex-wrap: wrap;
+    }
+    
+    .buyButton, .contactButton, .favoriteButton {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .productContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    .productImagesSection, .productInfo, .productActions {
+        grid-column: 1;
+    }
+    
+    .mainImageContainer {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productContainer {
+        padding: 15px;
+    }
+    
+    .mainImageContainer {
+        height: 250px;
+    }
+    
+    .productTitle {
+        font-size: 24px;
+    }
+    
+    .productPrice {
+        font-size: 26px;
+    }
+    
+    .productDetails {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
