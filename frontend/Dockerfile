@@ -10,7 +10,7 @@ RUN npm ci
 
 # Копируем исходный код
 COPY . .
-
+ENV NODE_OPTIONS="--max-old-space-size=1024"
 # Собираем приложение
 RUN npm run build
 
