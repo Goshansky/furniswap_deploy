@@ -17,7 +17,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className={styles.hero}
         >
-            <h2 className={styles.title}>Поддержанная мебель с выгодой!</h2>
+            <h2 className={styles.title}>Подержанная мебель с выгодой!</h2>
             <p className={styles.subtitle}>Покупайте и продавайте с комфортом</p>
             <Button 
                 type="primary" 
